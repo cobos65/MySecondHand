@@ -10,9 +10,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		global.json = global.json
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SecondHandSpider", "src\WallapopSpider\SecondHandSpider.xproj", "{918F96F8-DFBF-415D-83C3-78E14DC46650}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SecondHand.Helpers", "src\SecondHand.Helpers\SecondHand.Helpers.xproj", "{BEA7EB71-FC61-498D-8D5E-C7760F7D9466}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SecondHandConsole", "src\SecondHandConsole\SecondHandConsole.xproj", "{0272AE2A-89F9-49AC-81D7-35635031F503}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SecondHand.Console", "src\SecondHand.Console\SecondHand.Console.xproj", "{0272AE2A-89F9-49AC-81D7-35635031F503}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SecondHand.Spider", "src\SecondHand.Spider\SecondHand.Spider.xproj", "{918F96F8-DFBF-415D-83C3-78E14DC46650}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SecondHand.Helpers.Integration.Tests", "src\SecondHand.Helpers.Integration.Tests\SecondHand.Helpers.Integration.Tests.xproj", "{17A7328E-E4A0-4F91-B6D2-ED654F7DC237}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,20 +24,30 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{918F96F8-DFBF-415D-83C3-78E14DC46650}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{918F96F8-DFBF-415D-83C3-78E14DC46650}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{918F96F8-DFBF-415D-83C3-78E14DC46650}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{918F96F8-DFBF-415D-83C3-78E14DC46650}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEA7EB71-FC61-498D-8D5E-C7760F7D9466}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEA7EB71-FC61-498D-8D5E-C7760F7D9466}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEA7EB71-FC61-498D-8D5E-C7760F7D9466}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEA7EB71-FC61-498D-8D5E-C7760F7D9466}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0272AE2A-89F9-49AC-81D7-35635031F503}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0272AE2A-89F9-49AC-81D7-35635031F503}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0272AE2A-89F9-49AC-81D7-35635031F503}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0272AE2A-89F9-49AC-81D7-35635031F503}.Release|Any CPU.Build.0 = Release|Any CPU
+		{918F96F8-DFBF-415D-83C3-78E14DC46650}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{918F96F8-DFBF-415D-83C3-78E14DC46650}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{918F96F8-DFBF-415D-83C3-78E14DC46650}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{918F96F8-DFBF-415D-83C3-78E14DC46650}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17A7328E-E4A0-4F91-B6D2-ED654F7DC237}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17A7328E-E4A0-4F91-B6D2-ED654F7DC237}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17A7328E-E4A0-4F91-B6D2-ED654F7DC237}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17A7328E-E4A0-4F91-B6D2-ED654F7DC237}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{918F96F8-DFBF-415D-83C3-78E14DC46650} = {2AB870BB-E07E-4EA2-A12A-D4043D9E99BD}
+		{BEA7EB71-FC61-498D-8D5E-C7760F7D9466} = {2AB870BB-E07E-4EA2-A12A-D4043D9E99BD}
 		{0272AE2A-89F9-49AC-81D7-35635031F503} = {2AB870BB-E07E-4EA2-A12A-D4043D9E99BD}
+		{918F96F8-DFBF-415D-83C3-78E14DC46650} = {2AB870BB-E07E-4EA2-A12A-D4043D9E99BD}
+		{17A7328E-E4A0-4F91-B6D2-ED654F7DC237} = {2AB870BB-E07E-4EA2-A12A-D4043D9E99BD}
 	EndGlobalSection
 EndGlobal

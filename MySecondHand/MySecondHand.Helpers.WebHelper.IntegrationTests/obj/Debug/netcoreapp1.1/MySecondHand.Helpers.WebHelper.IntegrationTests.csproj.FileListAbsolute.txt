@@ -1,0 +1,12 @@
+D:\Projects\Git\MySecondHand\MySecondHand.Helpers.WebHelper.IntegrationTests\bin\Debug\netcoreapp1.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+D:\Projects\Git\MySecondHand\MySecondHand.Helpers.WebHelper.IntegrationTests\bin\Debug\netcoreapp1.1\xunit.runner.utility.netstandard15.dll
+D:\Projects\Git\MySecondHand\MySecondHand.Helpers.WebHelper.IntegrationTests\bin\Debug\netcoreapp1.1\xunit.runner.reporters.netstandard15.dll
+D:\Projects\Git\MySecondHand\MySecondHand.Helpers.WebHelper.IntegrationTests\bin\Debug\netcoreapp1.1\MySecondHand.Helpers.WebHelper.IntegrationTests.deps.json
+D:\Projects\Git\MySecondHand\MySecondHand.Helpers.WebHelper.IntegrationTests\bin\Debug\netcoreapp1.1\MySecondHand.Helpers.WebHelper.IntegrationTests.runtimeconfig.json
+D:\Projects\Git\MySecondHand\MySecondHand.Helpers.WebHelper.IntegrationTests\bin\Debug\netcoreapp1.1\MySecondHand.Helpers.WebHelper.IntegrationTests.runtimeconfig.dev.json
+D:\Projects\Git\MySecondHand\MySecondHand.Helpers.WebHelper.IntegrationTests\bin\Debug\netcoreapp1.1\MySecondHand.Helpers.WebHelper.IntegrationTests.dll
+D:\Projects\Git\MySecondHand\MySecondHand.Helpers.WebHelper.IntegrationTests\obj\Debug\netcoreapp1.1\MySecondHand.Helpers.WebHelper.IntegrationTests.csprojResolveAssemblyReference.cache
+D:\Projects\Git\MySecondHand\MySecondHand.Helpers.WebHelper.IntegrationTests\obj\Debug\netcoreapp1.1\MySecondHand.Helpers.WebHelper.IntegrationTests.AssemblyInfo.cs
+D:\Projects\Git\MySecondHand\MySecondHand.Helpers.WebHelper.IntegrationTests\bin\Debug\netcoreapp1.1\MySecondHand.Helpers.WebHelper.IntegrationTests.pdb
+D:\Projects\Git\MySecondHand\MySecondHand.Helpers.WebHelper.IntegrationTests\obj\Debug\netcoreapp1.1\MySecondHand.Helpers.WebHelper.IntegrationTests.dll
+D:\Projects\Git\MySecondHand\MySecondHand.Helpers.WebHelper.IntegrationTests\obj\Debug\netcoreapp1.1\MySecondHand.Helpers.WebHelper.IntegrationTests.pdb
