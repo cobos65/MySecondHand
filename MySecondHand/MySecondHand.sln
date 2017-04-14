@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MySecondHand.Helpers.Integr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySecondHand.Spider.Unit.Tests", "MySecondHand.Spider.Unit.Tests\MySecondHand.Spider.Unit.Tests.csproj", "{FAE584EE-4B03-4B28-9668-91CA5D7EDDD2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{77AB162E-234F-412F-A67F-BAEA57712486}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HtmlExamples", "HtmlExamples", "{77AB162E-234F-412F-A67F-BAEA57712486}"
 	ProjectSection(SolutionItems) = preProject
 		Examples\view-source_https___es.wallapop.com.html = Examples\view-source_https___es.wallapop.com.html
 		Examples\view-source_www.milanuncios.com_anuncios_.html = Examples\view-source_www.milanuncios.com_anuncios_.html

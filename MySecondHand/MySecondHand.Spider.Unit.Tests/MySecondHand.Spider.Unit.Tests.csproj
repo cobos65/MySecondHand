@@ -1,8 +1,25 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>    
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputType>Library</OutputType>
   </PropertyGroup>
+
+  <PropertyGroup>    
+    <TargetFramework>netcoreapp1.1</TargetFramework>    
+    <ApplicationIcon />    
+    <OutputTypeEx>library</OutputTypeEx>    
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="HtmlExamples\view-source_https___es.wallapop.com.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="HtmlExamples\view-source_https___es.wallapop.com.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0" />
@@ -14,6 +31,22 @@
   <ItemGroup>
     <ProjectReference Include="..\MySecondHand.Helpers\MySecondHand.Helpers.csproj" />
     <ProjectReference Include="..\MySecondHand.Spider\MySecondHand.Spider.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="HtmlExamples\view-source_https___es.wallapop.com.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="HtmlExamples\view-source_www.milanuncios.com_anuncios_.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="HtmlExamples\view-source_www.vibbo.com_anuncios-toda-espana_.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

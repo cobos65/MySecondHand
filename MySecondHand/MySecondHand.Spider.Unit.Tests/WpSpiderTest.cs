@@ -3,29 +3,49 @@ using HtmlAgilityPack;
 using NSubstitute;
 using System;
 using Xunit;
+using System.IO;
+using System.Reflection;
 
 namespace MySecondHand.Spider.Unit.Tests
 {
     public class WpSpiderTest
     {
         private IHtmlClientHelper _htmlClientHelper;
+        private WpSpider _wpSpider;
+        private HtmlDocument _mockHtmlDocument;
+        private const string BASE_PATH = @"D:\Projects\Git\MySecondHand\MySecondHand.Spider.Unit.Tests\";
 
-        [Fact]
+        
+        public WpSpiderTest()
+        {
+            _htmlClientHelper = Substitute.For<IHtmlClientHelper>();
+            _wpSpider = new WpSpider(_htmlClientHelper);
+
+            _mockHtmlDocument = new HtmlDocument();
+            var htmlFile = File.ReadAllText(BASE_PATH + @"HtmlExamples\view-source_https___es.wallapop.com.html");
+            _mockHtmlDocument.LoadHtml(htmlFile);
+        }
+
+        [Fact]                
         public void DoSearchShouldReturn()
         {
-            var mockHtmlDocument = new HtmlDocument();
+            _htmlClientHelper.GetInnerHtml(Arg.Any<string>()).Returns(_mockHtmlDocument);
             
-            _htmlClientHelper = Substitute.For<IHtmlClientHelper>();
-
-            _htmlClientHelper.GetInnerHtml(Arg.Any<string>()).Returns(mockHtmlDocument);
-
-            var wpSpider = new WpSpider(_htmlClientHelper);
-
-            var result = wpSpider.DoSearch(null);
+            var result = _wpSpider.DoSearch(null);
 
             Assert.NotNull(result);
+        }
 
+        [Fact]
+        public void GetSearchedItemsWithValidHtmlDocumentShouldReturn()
+        {
+            var result = _wpSpider.GetSearchedItems(_mockHtmlDocument);
 
+            Assert.True(result.Count > 0);
+            Assert.NotNull(result[0]);
+            Assert.Equal(result[0].ItemName, "Miniaturas agotadas.");
+            Assert.Equal(result[0].ItemPrice, "120€");
+            Assert.Equal(result[0].ItemCategory, "Moda y Accesorios");
         }
     }
 }
