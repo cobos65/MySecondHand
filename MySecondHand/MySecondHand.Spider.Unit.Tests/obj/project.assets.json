@@ -2,6 +2,40 @@
   "version": 2,
   "targets": {
     ".NETCoreApp,Version=v1.1": {
+      "Castle.Core/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.AppContext": "4.1.0",
+          "System.Collections.Specialized": "4.0.1",
+          "System.ComponentModel.TypeConverter": "4.0.1",
+          "System.Console": "4.0.0",
+          "System.Diagnostics.Debug": "4.0.11",
+          "System.Diagnostics.Tools": "4.0.1",
+          "System.Diagnostics.TraceSource": "4.0.0",
+          "System.Dynamic.Runtime": "4.0.11",
+          "System.Globalization": "4.0.11",
+          "System.IO.FileSystem": "4.0.1",
+          "System.Linq": "4.1.0",
+          "System.ObjectModel": "4.0.12",
+          "System.Reflection": "4.1.0",
+          "System.Reflection.Emit": "4.0.1",
+          "System.Reflection.Emit.Lightweight": "4.0.1",
+          "System.Reflection.Extensions": "4.0.1",
+          "System.Reflection.TypeExtensions": "4.1.0",
+          "System.Resources.ResourceManager": "4.0.1",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Runtime.InteropServices": "4.1.0",
+          "System.Threading": "4.0.11",
+          "System.Xml.XmlDocument": "4.0.1",
+          "System.Xml.XmlSerializer": "4.0.11"
+        },
+        "compile": {
+          "lib/netstandard1.3/Castle.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Castle.Core.dll": {}
+        }
+      },
       "HtmlAgilityPack.NetCore/1.5.0.1": {
         "type": "package",
         "dependencies": {
@@ -738,6 +772,22 @@
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
         }
       },
+      "NSubstitute/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Castle.Core": "4.0.0",
+          "Microsoft.CSharp": "4.0.1",
+          "NETStandard.Library": "1.6.0",
+          "System.Linq.Queryable": "4.0.1",
+          "System.Reflection.TypeExtensions": "4.1.0"
+        },
+        "compile": {
+          "lib/netstandard1.5/NSubstitute.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.5/NSubstitute.dll": {}
+        }
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
@@ -1030,7 +1080,7 @@
           "System.Threading": "4.0.11"
         },
         "compile": {
-          "ref/netstandard1.3/_._": {}
+          "ref/netstandard1.3/System.Collections.Specialized.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Collections.Specialized.dll": {}
@@ -1961,7 +2011,7 @@
           "System.Runtime": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.1/_._": {}
+          "ref/netstandard1.1/System.Reflection.Emit.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Reflection.Emit.dll": {}
@@ -1975,7 +2025,7 @@
           "System.Runtime": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.0/_._": {}
+          "ref/netstandard1.0/System.Reflection.Emit.ILGeneration.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Reflection.Emit.ILGeneration.dll": {}
@@ -1990,7 +2040,7 @@
           "System.Runtime": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.0/_._": {}
+          "ref/netstandard1.0/System.Reflection.Emit.Lightweight.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Reflection.Emit.Lightweight.dll": {}
@@ -2791,7 +2841,7 @@
           "System.Xml.XmlDocument": "4.0.1"
         },
         "compile": {
-          "ref/netstandard1.3/_._": {}
+          "ref/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
@@ -2937,10 +2987,49 @@
         "build": {
           "build/netcoreapp1.0/xunit.runner.visualstudio.props": {}
         }
+      },
+      "MySecondHand.Helpers/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v1.1",
+        "dependencies": {
+          "HtmlAgilityPack.NetCore": "1.5.0.1",
+          "Microsoft.NETCore.App": "1.1.1"
+        }
+      },
+      "MySecondHand.Spider/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v1.1",
+        "dependencies": {
+          "HtmlAgilityPack.NetCore": "1.5.0.1",
+          "Microsoft.NETCore.App": "1.1.1",
+          "MySecondHand.Helpers": "1.0.0",
+          "NSubstitute": "2.0.2"
+        }
       }
     }
   },
   "libraries": {
+    "Castle.Core/4.0.0": {
+      "sha512": "iLINpMFc07bcb0d075AB0mcXV/MT8J8oyBarDSeyrLM03UoCVOuvYu87LI4511XHfy7XEhHtMDum5gt2s56xDg==",
+      "type": "package",
+      "path": "castle.core/4.0.0",
+      "files": [
+        "ASL - Apache Software Foundation License.txt",
+        "CHANGELOG.md",
+        "LICENSE",
+        "castle.core.4.0.0.nupkg.sha512",
+        "castle.core.nuspec",
+        "lib/net35/Castle.Core.dll",
+        "lib/net35/Castle.Core.xml",
+        "lib/net40-client/Castle.Core.dll",
+        "lib/net40-client/Castle.Core.xml",
+        "lib/net45/Castle.Core.dll",
+        "lib/net45/Castle.Core.xml",
+        "lib/netstandard1.3/Castle.Core.dll",
+        "lib/netstandard1.3/Castle.Core.xml",
+        "readme.txt"
+      ]
+    },
     "HtmlAgilityPack.NetCore/1.5.0.1": {
       "sha512": "N6FUlFbidfiWu1TcrNDQufaU5TbZ2RRn+kYHjwsLxcklQU8Cnmul+pTn2clKausZRHeFVxGp2ZECIWuDvot8Hg==",
       "type": "package",
@@ -3518,6 +3607,28 @@
         "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.xml",
         "tools/install.ps1"
+      ]
+    },
+    "NSubstitute/2.0.2": {
+      "sha512": "VBxhx4L2FBHpDOlQgMhpRxmzg7bJYiGDutqh+mxtLtZityvoBOzNP8jwEFKz0WjhKLdc9onXTyXwuPf3MnUzFA==",
+      "type": "package",
+      "path": "nsubstitute/2.0.2",
+      "files": [
+        "BreakingChanges.txt",
+        "CHANGELOG.txt",
+        "LICENSE.txt",
+        "README.txt",
+        "acknowledgements.txt",
+        "lib/net35/NSubstitute.XML",
+        "lib/net35/NSubstitute.dll",
+        "lib/net40/NSubstitute.XML",
+        "lib/net40/NSubstitute.dll",
+        "lib/net45/NSubstitute.XML",
+        "lib/net45/NSubstitute.dll",
+        "lib/netstandard1.5/NSubstitute.dll",
+        "lib/netstandard1.5/NSubstitute.xml",
+        "nsubstitute.2.0.2.nupkg.sha512",
+        "nsubstitute.nuspec"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -8578,13 +8689,25 @@
         "xunit.runner.visualstudio.2.2.0.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "MySecondHand.Helpers/1.0.0": {
+      "type": "project",
+      "path": "../MySecondHand.Helpers/MySecondHand.Helpers.csproj",
+      "msbuildProject": "../MySecondHand.Helpers/MySecondHand.Helpers.csproj"
+    },
+    "MySecondHand.Spider/1.0.0": {
+      "type": "project",
+      "path": "../MySecondHand.Spider/MySecondHand.Spider.csproj",
+      "msbuildProject": "../MySecondHand.Spider/MySecondHand.Spider.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v1.1": [
-      "HtmlAgilityPack.NetCore >= 1.5.0.1",
       "Microsoft.NET.Test.Sdk >= 15.0.0",
       "Microsoft.NETCore.App >= 1.1.1",
+      "MySecondHand.Helpers >= 1.0.0",
+      "MySecondHand.Spider >= 1.0.0",
+      "NSubstitute >= 2.0.2",
       "xunit >= 2.2.0",
       "xunit.runner.visualstudio >= 2.2.0"
     ]
@@ -8595,17 +8718,24 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\Git\\MySecondHand\\MySecondHand.Helpers.WebHelper.IntegrationTests\\MySecondHand.Helpers.IntegrationTests.csproj",
-      "projectName": "MySecondHand.Helpers.IntegrationTests",
-      "projectPath": "D:\\Projects\\Git\\MySecondHand\\MySecondHand.Helpers.WebHelper.IntegrationTests\\MySecondHand.Helpers.IntegrationTests.csproj",
-      "outputPath": "D:\\Projects\\Git\\MySecondHand\\MySecondHand.Helpers.WebHelper.IntegrationTests\\obj\\",
+      "projectUniqueName": "D:\\Projects\\Git\\MySecondHand\\MySecondHand.Spider.Unit.Tests\\MySecondHand.Spider.Unit.Tests.csproj",
+      "projectName": "MySecondHand.Spider.Unit.Tests",
+      "projectPath": "D:\\Projects\\Git\\MySecondHand\\MySecondHand.Spider.Unit.Tests\\MySecondHand.Spider.Unit.Tests.csproj",
+      "outputPath": "D:\\Projects\\Git\\MySecondHand\\MySecondHand.Spider.Unit.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
       ],
       "frameworks": {
         "netcoreapp1.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Projects\\Git\\MySecondHand\\MySecondHand.Spider\\MySecondHand.Spider.csproj": {
+              "projectPath": "D:\\Projects\\Git\\MySecondHand\\MySecondHand.Spider\\MySecondHand.Spider.csproj"
+            },
+            "D:\\Projects\\Git\\MySecondHand\\MySecondHand.Helpers\\MySecondHand.Helpers.csproj": {
+              "projectPath": "D:\\Projects\\Git\\MySecondHand\\MySecondHand.Helpers\\MySecondHand.Helpers.csproj"
+            }
+          }
         }
       }
     },
@@ -8615,6 +8745,10 @@
           "xunit.runner.visualstudio": {
             "target": "Package",
             "version": "2.2.0"
+          },
+          "NSubstitute": {
+            "target": "Package",
+            "version": "2.0.2"
           },
           "Microsoft.NETCore.App": {
             "target": "Package",
@@ -8628,10 +8762,6 @@
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
             "version": "15.0.0"
-          },
-          "HtmlAgilityPack.NetCore": {
-            "target": "Package",
-            "version": "1.5.0.1"
           }
         }
       }
