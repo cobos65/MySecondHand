@@ -8,7 +8,7 @@ namespace MySecondHand.Spider
 {
     public class WpSpider
     {
-        public string BaseUrl = "www.wallapop.es";
+        public const string BASE_URL = "www.wallapop.es";
         private IHtmlClientHelper _htmlClientHelper;
 
         private const string TITTLE_XPATH = ".//*[contains(@class, 'product-info-title')]";
@@ -22,30 +22,34 @@ namespace MySecondHand.Spider
             _htmlClientHelper = htmlClientHelper;
         }
 
-        public HtmlDocument DoSearch(string parameters)
+        public HtmlDocument DoSearch(SearchParameter parameter)
         {
-            var completeurl = ComposeUrl(parameters);
+            var completeurl = ComposeSearchUrl(parameter);
 
             return _htmlClientHelper.GetInnerHtml(completeurl);
         }
 
-        public string ComposeUrl(string parameters)
+        public string ComposeSearchUrl(SearchParameter parameter)
         {
-            string result = BaseUrl;
-
-            return result;
+            string searchParams = string.Empty;
+            
+            if (parameter != null)
+            {
+                searchParams = $"/search?kws={parameter.SearchKey}&lat={parameter.SearchKey}&lng={parameter.SearchKey}";
+            }
+            return string.Concat(BASE_URL, searchParams);
         }
 
         public IList<ProductItem> GetSearchedItems(HtmlDocument searchResult)
         {
             IList<ProductItem> items = new List<ProductItem>();
 
-            var findclasses = searchResult.DocumentNode
+            var findItems = searchResult.DocumentNode
                 .Descendants("div")
                 .Where(d => d.Attributes["class"] != null && d.Attributes["class"].Value.Contains("card ") && d.Attributes["class"].Value.Contains("card-product ")
                 );
 
-            foreach (var documentNode in findclasses)
+            foreach (var documentNode in findItems)
             {
                 if (IsValidNode(documentNode))
                 {
@@ -77,9 +81,9 @@ namespace MySecondHand.Spider
             }
             else
             {
-                valid = node.SelectNodes(TITTLE_XPATH) != null 
-                    && node.SelectNodes(CATEGORY_XPATH) != null 
-                    && node.SelectNodes(PRICE_XPATH) != null 
+                valid = node.SelectNodes(TITTLE_XPATH) != null
+                    && node.SelectNodes(CATEGORY_XPATH) != null
+                    && node.SelectNodes(PRICE_XPATH) != null
                     && node.SelectNodes(IMAGE_XPATH) != null;
 
                 return valid;
