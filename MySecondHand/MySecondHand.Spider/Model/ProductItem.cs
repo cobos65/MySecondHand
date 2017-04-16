@@ -13,5 +13,6 @@ namespace MySecondHand.Spider.Model
         public string ItemPrice { get; set; }
         public string ItemImage { get; set; }
         public string ItemHtml { get; set; }
+        public string ItemZone { get; set; }
     }
 }

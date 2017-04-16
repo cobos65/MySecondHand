@@ -6,21 +6,21 @@ using MySecondHand.Spider.Model;
 
 namespace MySecondHand.Spider
 {
-    public class VbbSpider
+    public class MaSpider
     {
         public const string BASE_URL = "www.wallapop.es";
         private IHtmlClientHelper _htmlClientHelper;
 
         //TODO
-        private const string TITTLE_XPATH = ".//*[contains(@class, 'subjectTitle')]";
+        private const string TITTLE_XPATH = ".//*[contains(@class, '')]";
         private const string CATEGORY_XPATH = "";
-        private const string PRICE_XPATH = ".//*[contains(@class, 'subjectPrice')]";
-        private const string IMAGE_XPATH = ".//img[contains(@class, 'lazy')]";
-        private const string ZONE_XPATH = ".//*[contains(@class, 'zone')]";
+        private const string PRICE_XPATH = ".//*[contains(@class, '')]";
+        private const string IMAGE_XPATH = ".//img[contains(@class, '')]";
+        private const string ZONE_XPATH = ".//*[contains(@class, '')]";
         
 
 
-        public VbbSpider(IHtmlClientHelper htmlClientHelper)
+        public MaSpider(IHtmlClientHelper htmlClientHelper)
         {
             _htmlClientHelper = htmlClientHelper;
         }
@@ -51,20 +51,8 @@ namespace MySecondHand.Spider
 
             foreach (var documentNode in findItems)
             {
-                if (IsValidNode(documentNode))
-                {
-                    var productItem = new ProductItem();
-                    productItem.ItemName = documentNode.SelectNodes(TITTLE_XPATH).First().InnerHtml;
-                    productItem.ItemLink = documentNode.SelectNodes(TITTLE_XPATH).First().GetAttributeValue("href", "");
-                    productItem.ItemPrice = documentNode.SelectNodes(PRICE_XPATH).First().InnerHtml;
-                    productItem.ItemZone = documentNode.SelectNodes(ZONE_XPATH).First().InnerHtml;
-                    productItem.ItemImage = documentNode.SelectNodes(IMAGE_XPATH)
-                        .First()
-                        .GetAttributeValue("src", "");
-                    productItem.ItemHtml = documentNode.InnerHtml;
-
-                    items.Add(productItem);
-                }
+                var productItem = new ProductItem();
+                productItem.ItemName = documentNode.SelectNodes(TITTLE_XPATH).First().InnerHtml;
             }
 
             return items;
