@@ -11,7 +11,7 @@ namespace MySecondHand.Spider.Unit.Tests
     public class VbbSpiderTest
     {
         private IHtmlClientHelper _htmlClientHelper;
-        private WbbSpider _wbbSpider;
+        private VbbSpider _vbbSpider;
         private HtmlDocument _mockHtmlDocument;
         private const string BASE_PATH = @"D:\Projects\Git\MySecondHand\MySecondHand.Spider.Unit.Tests\";
 
@@ -19,10 +19,10 @@ namespace MySecondHand.Spider.Unit.Tests
         public VbbSpiderTest()
         {
             _htmlClientHelper = Substitute.For<IHtmlClientHelper>();
-            _wpSpider = new WpSpider(_htmlClientHelper);
+            _vbbSpider = new VbbSpider(_htmlClientHelper);
 
             _mockHtmlDocument = new HtmlDocument();
-            var htmlFile = File.ReadAllText(BASE_PATH + @"HtmlExamples\view-source_https___es.wallapop.com.html");
+            var htmlFile = File.ReadAllText(BASE_PATH + @"HtmlExamples\view-source_www.vibbo.com_anuncios-toda-espana_.html");
             _mockHtmlDocument.LoadHtml(htmlFile);
         }
 
@@ -31,7 +31,7 @@ namespace MySecondHand.Spider.Unit.Tests
         {
             _htmlClientHelper.GetInnerHtml(Arg.Any<string>()).Returns(_mockHtmlDocument);
             
-            var result = _wpSpider.DoSearch(null);
+            var result = _vbbSpider.DoSearch(null);
 
             Assert.NotNull(result);
         }
@@ -39,7 +39,7 @@ namespace MySecondHand.Spider.Unit.Tests
         [Fact]
         public void GetSearchedItemsWithValidHtmlDocumentShouldReturn()
         {
-            var result = _wpSpider.GetSearchedItems(_mockHtmlDocument);
+            var result = _vbbSpider.GetSearchedItems(_mockHtmlDocument);
 
             Assert.True(result.Count > 0);
             Assert.NotNull(result[0]);

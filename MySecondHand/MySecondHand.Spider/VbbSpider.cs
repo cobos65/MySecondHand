@@ -16,7 +16,7 @@ namespace MySecondHand.Spider
         private const string CATEGORY_XPATH = "";
         private const string PRICE_XPATH = ".//*[contains(@class, 'subjectPrice')]";
         private const string IMAGE_XPATH = ".//img[contains(@class, 'lazy')]";
-        private const string ZONE_XPATH = ".//*[contains(@class, 'zone')]";
+        private const string ZONE_XPATH = ".//*[contains(@class, 'zone')]/a";
         
 
 
@@ -54,10 +54,10 @@ namespace MySecondHand.Spider
                 if (IsValidNode(documentNode))
                 {
                     var productItem = new ProductItem();
-                    productItem.ItemName = documentNode.SelectNodes(TITTLE_XPATH).First().InnerHtml;
+                    productItem.ItemName = documentNode.SelectNodes(TITTLE_XPATH).First().InnerText;
                     productItem.ItemLink = documentNode.SelectNodes(TITTLE_XPATH).First().GetAttributeValue("href", "");
-                    productItem.ItemPrice = documentNode.SelectNodes(PRICE_XPATH).First().InnerHtml;
-                    productItem.ItemZone = documentNode.SelectNodes(ZONE_XPATH).First().InnerHtml;
+                    productItem.ItemPrice = documentNode.SelectNodes(PRICE_XPATH).First().InnerText.Trim().Replace("&euro","€");
+                    productItem.ItemZone = documentNode.SelectNodes(ZONE_XPATH).First().InnerText;
                     productItem.ItemImage = documentNode.SelectNodes(IMAGE_XPATH)
                         .First()
                         .GetAttributeValue("src", "");
