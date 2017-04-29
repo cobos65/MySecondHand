@@ -2,20 +2,23 @@
 # Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
 ################################################################################
 
-/MySecondHand/MySecondHand.Spider/obj
-/MySecondHand/MySecondHand.Spider.Unit.Tests/obj/
-/MySecondHand/MySecondHand.Spider.Unit.Tests/obj/Release/netcoreapp1.1
-/MySecondHand/MySecondHand.Helpers.IntegrationTests/obj/
-/MySecondHand/MySecondHand.Helpers.IntegrationTests/obj/Release/netcoreapp1.1
-/MySecondHand/MySecondHand.Helpers/obj/
-/MySecondHand/MySecondHand.Helpers/obj/Release/netcoreapp1.1
-/MySecondHand/MySecondHand/obj/
-/MySecondHand/MySecondHand/obj/Release/netcoreapp1.1
 /.vs/VSWorkspaceState.json
-obj/Release/netcoreapp1.1
-obj/Debug/netcoreapp1.1
 /MySecondHand/MySecondHand.Spider.Unit.Tests/bin/Release/netcoreapp1.1
 /MySecondHand/MySecondHand.Spider/bin/Release/netcoreapp1.1
 /MySecondHand/MySecondHand.Helpers.IntegrationTests/bin/Release/netcoreapp1.1
 /MySecondHand/MySecondHand.Helpers/bin/Release/netcoreapp1.1
 /MySecondHand/MySecondHand/bin/Release/netcoreapp1.1
+/MySecondHand/MySecondHand.Spider.Unit.Tests/obj/Release/netcoreapp1.1
+/MySecondHand/MySecondHand.Spider/obj
+/MySecondHand/MySecondHand.Helpers.IntegrationTests/obj/Release/netcoreapp1.1
+/MySecondHand/MySecondHand.Helpers/obj/Release/netcoreapp1.1
+/MySecondHand/MySecondHand/obj/Release/netcoreapp1.1
+/MySecondHand/MySecondHand.Spider.Unit.Tests/bin/Debug/netcoreapp1.1
+/MySecondHand/MySecondHand.Spider/bin/Debug/netcoreapp1.1
+/MySecondHand/MySecondHand.Helpers.IntegrationTests/bin/Debug/netcoreapp1.1
+/MySecondHand/MySecondHand.Helpers/bin/Debug/netcoreapp1.1
+/MySecondHand/MySecondHand/bin/Debug/netcoreapp1.1
+/MySecondHand/MySecondHand.Spider.Unit.Tests/obj/Debug/netcoreapp1.1
+/MySecondHand/MySecondHand.Helpers.IntegrationTests/obj/Debug/netcoreapp1.1
+/MySecondHand/MySecondHand.Helpers/obj/Debug/netcoreapp1.1
+/MySecondHand/MySecondHand/obj/Debug/netcoreapp1.1
