@@ -3,5 +3,12 @@
 ################################################################################
 
 /.vs/VSWorkspaceState.json
-/bin
-/obj
+/MySecondHand/MySecondHand.Spider.Unit.Tests/obj
+/MySecondHand/MySecondHand.Spider.Unit.Tests/bin/Debug/netcoreapp1.1
+/MySecondHand/MySecondHand.Spider/obj
+/MySecondHand/MySecondHand.Spider/bin/Debug/netcoreapp1.1
+/MySecondHand/MySecondHand.Helpers.IntegrationTests/obj
+/MySecondHand/MySecondHand.Helpers.IntegrationTests/bin/Debug/netcoreapp1.1
+/MySecondHand/MySecondHand.Helpers/bin/Debug/netcoreapp1.1
+/MySecondHand/MySecondHand/obj
+/MySecondHand/MySecondHand/bin/Debug/netcoreapp1.1
