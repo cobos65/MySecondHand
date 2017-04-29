@@ -14,3 +14,8 @@
 /.vs/VSWorkspaceState.json
 obj/Release/netcoreapp1.1
 obj/Debug/netcoreapp1.1
+/MySecondHand/MySecondHand.Spider.Unit.Tests/bin/Release/netcoreapp1.1
+/MySecondHand/MySecondHand.Spider/bin/Release/netcoreapp1.1
+/MySecondHand/MySecondHand.Helpers.IntegrationTests/bin/Release/netcoreapp1.1
+/MySecondHand/MySecondHand.Helpers/bin/Release/netcoreapp1.1
+/MySecondHand/MySecondHand/bin/Release/netcoreapp1.1
