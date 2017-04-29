@@ -8,16 +8,16 @@ namespace MySecondHand.Spider
 {
     public class MaSpider
     {
-        public const string BASE_URL = "www.wallapop.es";
+        public const string BASE_URL = "www.milanuncios.es";
         private IHtmlClientHelper _htmlClientHelper;
 
         //TODO
-        private const string TITTLE_XPATH = ".//*[contains(@class, '')]";
+        private const string TITTLE_XPATH = ".//*[contains(@class, 'aditem-detail-title')]";
         private const string CATEGORY_XPATH = "";
-        private const string PRICE_XPATH = ".//*[contains(@class, '')]";
-        private const string IMAGE_XPATH = ".//img[contains(@class, '')]";
-        private const string ZONE_XPATH = ".//*[contains(@class, '')]";
-        
+        private const string PRICE_XPATH = ".//*[contains(@class, 'aditem-price')]";
+        private const string IMAGE_XPATH = ".//img[contains(@class, 'ef')]";
+        private const string ZONE_XPATH = ".//*[contains(@class, 'x4 display-desktop')]";
+
 
 
         public MaSpider(IHtmlClientHelper htmlClientHelper)
@@ -36,7 +36,7 @@ namespace MySecondHand.Spider
         public string ComposeSearchUrl(SearchParameter parameter)
         {
             string searchParams = string.Empty;
-            
+
             return string.Concat(BASE_URL, searchParams);
         }
 
@@ -47,12 +47,26 @@ namespace MySecondHand.Spider
 
             var findItems = searchResult.DocumentNode
                 .Descendants("div")
-                .Where(d => d.Attributes["class"] != null && d.Attributes["class"].Value.Contains("basicList flip-container list_ads_row"));
+                .Where(d => d.Attributes["class"] != null && d.Attributes["class"].Value.Equals("aditem"));
 
             foreach (var documentNode in findItems)
             {
-                var productItem = new ProductItem();
-                productItem.ItemName = documentNode.SelectNodes(TITTLE_XPATH).First().InnerHtml;
+                if (IsValidNode(documentNode))
+                {
+                    var productItem = new ProductItem();
+                    productItem.ItemName = documentNode.SelectNodes(TITTLE_XPATH).First().InnerHtml.Trim();
+                    productItem.ItemLink = documentNode.SelectNodes(TITTLE_XPATH).First().GetAttributeValue("href", "");
+                    productItem.ItemCategory = string.IsNullOrEmpty(CATEGORY_XPATH) ? null : documentNode.SelectNodes(CATEGORY_XPATH).First().InnerHtml.Trim();
+                    productItem.ItemCategoryLink = string.IsNullOrEmpty(CATEGORY_XPATH) ? null : documentNode.SelectNodes(CATEGORY_XPATH).First().GetAttributeValue("href", "");
+                    productItem.ItemPrice = documentNode.SelectNodes(PRICE_XPATH).First().InnerText.Trim().Replace(";", "").Replace("&euro", "€");
+                    productItem.ItemZone = documentNode.SelectNodes(ZONE_XPATH).First().InnerText.Split('(', ')')[1];
+                    productItem.ItemImage = documentNode.SelectNodes(IMAGE_XPATH) == null ? null : documentNode.SelectNodes(IMAGE_XPATH)
+                        .First()
+                        .GetAttributeValue("src", "");
+                    productItem.ItemHtml = documentNode.InnerHtml;
+
+                    items.Add(productItem);
+                }
             }
 
             return items;
@@ -71,8 +85,7 @@ namespace MySecondHand.Spider
             {
                 valid = node.SelectNodes(TITTLE_XPATH) != null
                     && node.SelectNodes(ZONE_XPATH) != null
-                    && node.SelectNodes(PRICE_XPATH) != null
-                    && node.SelectNodes(IMAGE_XPATH) != null;
+                    && node.SelectNodes(PRICE_XPATH) != null;
 
                 return valid;
             }

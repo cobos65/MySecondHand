@@ -22,7 +22,9 @@ namespace SecondHand.Helpers
                 var response = Task.Run(()=>client.GetAsync(url)).Result;
                 if (response.IsSuccessStatusCode)
                 {
-                    var responseJson = response.Content.ReadAsStringAsync();                    
+                    var responseJson = response.Content.ReadAsStringAsync();
+                    htmlDocument = new HtmlDocument();
+                    htmlDocument.LoadHtml(responseJson.Result);
                 }
             }
 

@@ -22,7 +22,7 @@ namespace MySecondHand.Spider.Unit.Tests
             _maSpider = new MaSpider(_htmlClientHelper);
 
             _mockHtmlDocument = new HtmlDocument();
-            var htmlFile = File.ReadAllText(BASE_PATH + @"HtmlExamples\");
+            var htmlFile = File.ReadAllText(BASE_PATH + @"HtmlExamples\view-source_www.milanuncios.com_anuncios_.html");
             _mockHtmlDocument.LoadHtml(htmlFile);
         }
 
@@ -43,9 +43,10 @@ namespace MySecondHand.Spider.Unit.Tests
 
             Assert.True(result.Count > 0);
             Assert.NotNull(result[0]);
-            Assert.Equal(result[0].ItemName, "Miniaturas agotadas.");
-            Assert.Equal(result[0].ItemPrice, "120€");
-            Assert.Equal(result[0].ItemCategory, "Moda y Accesorios");
+            Assert.Equal(result[0].ItemName, "ALFA ROMEO - GIULIETTA 1. 4 T 120CV DISTINCTIVE");
+            Assert.Equal(result[0].ItemPrice, "17.900€");
+            Assert.Null(result[0].ItemCategory);
+            Assert.Equal(result[0].ItemZone, "ASTURIAS");
         }
     }
 }

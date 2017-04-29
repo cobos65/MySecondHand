@@ -12,3 +12,5 @@
 /MySecondHand/MySecondHand.Helpers/obj/Release/netcoreapp1.1
 /MySecondHand/MySecondHand/obj/Release/netcoreapp1.1
 /.vs/VSWorkspaceState.json
+*/bin/*
+*/obj/*

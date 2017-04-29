@@ -54,11 +54,11 @@ namespace MySecondHand.Spider
                 if (IsValidNode(documentNode))
                 {
                     var productItem = new ProductItem();
-                    productItem.ItemName = documentNode.SelectNodes(TITTLE_XPATH).First().InnerHtml;
+                    productItem.ItemName = documentNode.SelectNodes(TITTLE_XPATH).First().InnerHtml.Trim();
                     productItem.ItemLink = documentNode.SelectNodes(TITTLE_XPATH).First().GetAttributeValue("href", "");
-                    productItem.ItemCategory = documentNode.SelectNodes(CATEGORY_XPATH).First().InnerHtml;
+                    productItem.ItemCategory = documentNode.SelectNodes(CATEGORY_XPATH).First().InnerHtml.Trim();
                     productItem.ItemCategoryLink = documentNode.SelectNodes(CATEGORY_XPATH).First().GetAttributeValue("href", "");
-                    productItem.ItemPrice = documentNode.SelectNodes(PRICE_XPATH).First().InnerHtml;
+                    productItem.ItemPrice = documentNode.SelectNodes(PRICE_XPATH).First().InnerHtml.Trim();
                     productItem.ItemImage = documentNode.SelectNodes(IMAGE_XPATH)
                         .First()
                         .GetAttributeValue("src", "");

@@ -43,9 +43,11 @@ namespace MySecondHand.Spider.Unit.Tests
 
             Assert.True(result.Count > 0);
             Assert.NotNull(result[0]);
-            Assert.Equal(result[0].ItemName, "Miniaturas agotadas.");
-            Assert.Equal(result[0].ItemPrice, "120€");
-            Assert.Equal(result[0].ItemCategory, "Moda y Accesorios");
+            Assert.Equal(result[0].ItemName, "PS4");
+            Assert.Equal(result[0].ItemPrice, "200€");
+            Assert.Null(result[0].ItemCategory);
+            Assert.Equal(result[0].ItemZone, "Asturias");
+
         }
 
         [Fact]

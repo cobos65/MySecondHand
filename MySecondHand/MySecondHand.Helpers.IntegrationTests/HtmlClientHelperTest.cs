@@ -8,7 +8,7 @@ namespace MySecondHand.Helpers.WebHelper.IntegrationTests
         [Fact]
         public void GetInnerHtmlShouldReturn()
         {
-            var url = "www.google.es";
+            var url = "http://www.google.es";
             var htmlClientHelper = new HtmlClientHelper();
 
             var result = htmlClientHelper.GetInnerHtml(url);
