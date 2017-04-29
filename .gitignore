@@ -3,22 +3,5 @@
 ################################################################################
 
 /.vs/VSWorkspaceState.json
-/MySecondHand/MySecondHand.Spider.Unit.Tests/bin/Release/netcoreapp1.1
-/MySecondHand/MySecondHand.Spider/bin/Release/netcoreapp1.1
-/MySecondHand/MySecondHand.Helpers.IntegrationTests/bin/Release/netcoreapp1.1
-/MySecondHand/MySecondHand.Helpers/bin/Release/netcoreapp1.1
-/MySecondHand/MySecondHand/bin/Release/netcoreapp1.1
-/MySecondHand/MySecondHand.Spider.Unit.Tests/obj/Release/netcoreapp1.1
-/MySecondHand/MySecondHand.Spider/obj
-/MySecondHand/MySecondHand.Helpers.IntegrationTests/obj/Release/netcoreapp1.1
-/MySecondHand/MySecondHand.Helpers/obj/Release/netcoreapp1.1
-/MySecondHand/MySecondHand/obj/Release/netcoreapp1.1
-/MySecondHand/MySecondHand.Spider.Unit.Tests/bin/Debug/netcoreapp1.1
-/MySecondHand/MySecondHand.Spider/bin/Debug/netcoreapp1.1
-/MySecondHand/MySecondHand.Helpers.IntegrationTests/bin/Debug/netcoreapp1.1
-/MySecondHand/MySecondHand.Helpers/bin/Debug/netcoreapp1.1
-/MySecondHand/MySecondHand/bin/Debug/netcoreapp1.1
-/MySecondHand/MySecondHand.Spider.Unit.Tests/obj/Debug/netcoreapp1.1
-/MySecondHand/MySecondHand.Helpers.IntegrationTests/obj/Debug/netcoreapp1.1
-/MySecondHand/MySecondHand.Helpers/obj/Debug/netcoreapp1.1
-/MySecondHand/MySecondHand/obj/Debug/netcoreapp1.1
+/bin
+/obj
