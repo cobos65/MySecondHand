@@ -3,10 +3,11 @@ using HtmlAgilityPack;
 using System.Collections.Generic;
 using System.Linq;
 using MySecondHand.Spider.Model;
+using MySecondHand.Spider.Interfaces;
 
 namespace MySecondHand.Spider
 {
-    public class VbbSpider
+    public class VbbSpider: IVbbSpider
     {
         public const string BASE_URL = "www.wallapop.es";
         private IHtmlClientHelper _htmlClientHelper;
@@ -17,8 +18,14 @@ namespace MySecondHand.Spider
         private const string PRICE_XPATH = ".//*[contains(@class, 'subjectPrice')]";
         private const string IMAGE_XPATH = ".//img[contains(@class, 'lazy')]";
         private const string ZONE_XPATH = ".//*[contains(@class, 'zone')]/a";
+        private bool _enabled = true;
 
-
+        public bool Enabled
+        {
+            get { return _enabled; }
+            set { _enabled = value; }
+        }
+        public SpiderType Type { get => SpiderType.Vbb; }
 
         public VbbSpider(IHtmlClientHelper htmlClientHelper)
         {
@@ -32,15 +39,6 @@ namespace MySecondHand.Spider
             return _htmlClientHelper.GetInnerHtml(completeurl);
         }
 
-        //TODO
-        public string ComposeSearchUrl(SearchParameter parameter)
-        {
-            string searchParams = string.Empty;
-
-            return string.Concat(BASE_URL, searchParams);
-        }
-
-        //TODO
         public IList<ProductItem> GetSearchedItems(HtmlDocument searchResult)
         {
             IList<ProductItem> items = new List<ProductItem>();
@@ -62,6 +60,7 @@ namespace MySecondHand.Spider
                         .First()
                         .GetAttributeValue("src", "");
                     productItem.ItemHtml = documentNode.InnerHtml;
+                    productItem.ItemSource = Type;
 
                     items.Add(productItem);
                 }
@@ -70,7 +69,13 @@ namespace MySecondHand.Spider
             return items;
         }
 
-        //TODO
+        public string ComposeSearchUrl(SearchParameter parameter)
+        {
+            string searchParams = string.Empty;
+
+            return string.Concat(BASE_URL, searchParams);
+        }
+    
         private bool IsValidNode(HtmlNode node)
         {
             bool valid = false;

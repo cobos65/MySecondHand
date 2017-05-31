@@ -3,22 +3,30 @@ using HtmlAgilityPack;
 using System.Collections.Generic;
 using System.Linq;
 using MySecondHand.Spider.Model;
+using MySecondHand.Spider.Interfaces;
+using System;
 
 namespace MySecondHand.Spider
 {
-    public class MaSpider
+    public class MaSpider : IMaSpider
     {
         public const string BASE_URL = "www.milanuncios.es";
         private IHtmlClientHelper _htmlClientHelper;
 
-        //TODO
         private const string TITTLE_XPATH = ".//*[contains(@class, 'aditem-detail-title')]";
         private const string CATEGORY_XPATH = "";
         private const string PRICE_XPATH = ".//*[contains(@class, 'aditem-price')]";
         private const string IMAGE_XPATH = ".//img[contains(@class, 'ef')]";
         private const string ZONE_XPATH = ".//*[contains(@class, 'x4 display-desktop')]";
+        private bool _enabled = true;
 
+        public bool Enabled
+        {
+            get { return _enabled; }
+            set { _enabled = value; }
+        }
 
+        public SpiderType Type { get => SpiderType.Ma; }
 
         public MaSpider(IHtmlClientHelper htmlClientHelper)
         {
@@ -32,7 +40,6 @@ namespace MySecondHand.Spider
             return _htmlClientHelper.GetInnerHtml(completeurl);
         }
 
-        //TODO
         public string ComposeSearchUrl(SearchParameter parameter)
         {
             string searchParams = string.Empty;
@@ -40,7 +47,6 @@ namespace MySecondHand.Spider
             return string.Concat(BASE_URL, searchParams);
         }
 
-        //TODO
         public IList<ProductItem> GetSearchedItems(HtmlDocument searchResult)
         {
             IList<ProductItem> items = new List<ProductItem>();
@@ -65,6 +71,7 @@ namespace MySecondHand.Spider
                         .GetAttributeValue("src", "");
                     productItem.ItemHtml = documentNode.InnerHtml;
 
+                    productItem.ItemSource = Type;
                     items.Add(productItem);
                 }
             }
@@ -72,7 +79,6 @@ namespace MySecondHand.Spider
             return items;
         }
 
-        //TODO
         private bool IsValidNode(HtmlNode node)
         {
             bool valid = false;
