@@ -18,9 +18,9 @@ namespace SecondHand.Helpers
             HtmlDocument htmlDocument = null;
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri(url);
+                //client.BaseAddress = new Uri($"https://{url}");
                 client.DefaultRequestHeaders.Accept.Clear();
-                var response = Task.Run(() => client.GetAsync(url)).Result;
+                var response = Task.Run(() => client.GetAsync($"https://{url}")).Result;
                 if (response.IsSuccessStatusCode)
                 {
                     var responseJson = response.Content.ReadAsStringAsync();

@@ -63,7 +63,7 @@ namespace MySecondHand.Web
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Browser}/{action=Index}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

@@ -9,7 +9,7 @@ namespace MySecondHand.Spider
 {
     public class VbbSpider: IVbbSpider
     {
-        public const string BASE_URL = "www.wallapop.es";
+        public const string BASE_URL = "www.vibbo.com";
         private IHtmlClientHelper _htmlClientHelper;
 
         //TODO

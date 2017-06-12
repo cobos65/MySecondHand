@@ -1,0 +1,19 @@
+﻿@model List<MySecondHand.Web2.ViewModels.ProductItemViewModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@using (Html.BeginForm("SearchProducts", "Home"))
+{
+    @Html.TextBox("searchKey");
+    <input type="submit" name="submit" value="Search" />
+}
+
+@foreach (var item in Model)
+{
+    <tr>
+        <div>@item.ItemSource.ToString()</div>
+        <div>@item.ItemName</div>
+        <img src="@item.ItemImage" alt="Alternate Text"/>
+    </tr>
+}
