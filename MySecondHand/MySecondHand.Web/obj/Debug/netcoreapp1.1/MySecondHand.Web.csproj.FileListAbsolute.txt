@@ -11,3 +11,16 @@ D:\Projects\Git\MySecondHand\MySecondHand.Web\bin\Debug\netcoreapp1.1\MySecondHa
 D:\Projects\Git\MySecondHand\MySecondHand.Web\bin\Debug\netcoreapp1.1\MySecondHand.Spider.dll
 D:\Projects\Git\MySecondHand\MySecondHand.Web\bin\Debug\netcoreapp1.1\MySecondHand.Spider.pdb
 D:\Projects\Git\MySecondHand\MySecondHand.Web\bin\Debug\netcoreapp1.1\MySecondHand.Helpers.pdb
+H:\Projects\Git\MySecondHand\MySecondHand.Web\bin\Debug\netcoreapp1.1\MySecondHand.Web.deps.json
+H:\Projects\Git\MySecondHand\MySecondHand.Web\bin\Debug\netcoreapp1.1\MySecondHand.Web.runtimeconfig.json
+H:\Projects\Git\MySecondHand\MySecondHand.Web\bin\Debug\netcoreapp1.1\MySecondHand.Web.runtimeconfig.dev.json
+H:\Projects\Git\MySecondHand\MySecondHand.Web\bin\Debug\netcoreapp1.1\MySecondHand.Web.dll
+H:\Projects\Git\MySecondHand\MySecondHand.Web\bin\Debug\netcoreapp1.1\MySecondHand.Web.pdb
+H:\Projects\Git\MySecondHand\MySecondHand.Web\bin\Debug\netcoreapp1.1\MySecondHand.Helpers.dll
+H:\Projects\Git\MySecondHand\MySecondHand.Web\bin\Debug\netcoreapp1.1\MySecondHand.Spider.dll
+H:\Projects\Git\MySecondHand\MySecondHand.Web\bin\Debug\netcoreapp1.1\MySecondHand.Spider.pdb
+H:\Projects\Git\MySecondHand\MySecondHand.Web\bin\Debug\netcoreapp1.1\MySecondHand.Helpers.pdb
+H:\Projects\Git\MySecondHand\MySecondHand.Web\obj\Debug\netcoreapp1.1\MySecondHand.Web.csprojResolveAssemblyReference.cache
+H:\Projects\Git\MySecondHand\MySecondHand.Web\obj\Debug\netcoreapp1.1\MySecondHand.Web.AssemblyInfo.cs
+H:\Projects\Git\MySecondHand\MySecondHand.Web\obj\Debug\netcoreapp1.1\MySecondHand.Web.dll
+H:\Projects\Git\MySecondHand\MySecondHand.Web\obj\Debug\netcoreapp1.1\MySecondHand.Web.pdb

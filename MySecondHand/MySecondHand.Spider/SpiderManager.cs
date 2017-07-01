@@ -19,8 +19,11 @@ namespace MySecondHand.Spider
         public SpiderManager(IWpSpider wpSpider, IVbbSpider vbbSpider, IMaSpider maSpider)
         {
             _wpSpider = wpSpider;
+            _wpSpider.Enabled = false;
             _vbbSpider = vbbSpider;
+            _vbbSpider.Enabled = true;
             _maSpider = maSpider;
+            _maSpider.Enabled = false;
             Spiders = new List<ISpider>()
             {
                 _wpSpider,
@@ -44,6 +47,24 @@ namespace MySecondHand.Spider
                 }
             }
             return searchedProducts;
+        }
+
+        public void SetSpiderState(SpiderType spiderType, bool enabled)
+        {
+            switch (spiderType)
+            {
+                case SpiderType.Wp:
+                    _wpSpider.Enabled = enabled;
+                    break;
+                case SpiderType.Vbb:
+                    _vbbSpider.Enabled = enabled;
+                    break;
+                case SpiderType.Ma:
+                    _maSpider.Enabled = enabled;
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

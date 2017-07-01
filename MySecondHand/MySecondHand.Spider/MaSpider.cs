@@ -10,13 +10,13 @@ namespace MySecondHand.Spider
 {
     public class MaSpider : IMaSpider
     {
-        public const string BASE_URL = "www.milanuncios.es";
+        public const string BASE_URL = "www.milanuncios.com";
         private IHtmlClientHelper _htmlClientHelper;
 
         private const string TITTLE_XPATH = ".//*[contains(@class, 'aditem-detail-title')]";
         private const string CATEGORY_XPATH = "";
         private const string PRICE_XPATH = ".//*[contains(@class, 'aditem-price')]";
-        private const string IMAGE_XPATH = ".//img[contains(@class, 'ef')]";
+        private const string IMAGE_XPATH = @".//img[contains(@class, 'ef')]|.//img[contains(@class, 'ee')]";
         private const string ZONE_XPATH = ".//*[contains(@class, 'x4 display-desktop')]";
         private bool _enabled = true;
 
@@ -42,7 +42,16 @@ namespace MySecondHand.Spider
 
         public string ComposeSearchUrl(SearchParameter parameter)
         {
-            string searchParams = string.Empty;
+            string searchParams = "/anuncios/";
+            if (parameter!=null)
+            {
+                if (!string.IsNullOrEmpty(parameter.SearchKey))
+                {
+                    searchParams = $"{searchParams}{parameter.SearchKey}.htm";
+                }
+            }
+
+            searchParams = $"{searchParams}?demanda=n";
 
             return string.Concat(BASE_URL, searchParams);
         }

@@ -9,5 +9,7 @@ namespace MySecondHand.Spider.Interfaces
         List<ISpider> Spiders { get; set; }
 
         IList<ProductItem> SearchItems(SearchParameter parameter);
+
+        void SetSpiderState(SpiderType spiderType, bool enabled);
     }
 }

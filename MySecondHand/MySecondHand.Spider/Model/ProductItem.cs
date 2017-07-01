@@ -15,6 +15,5 @@ namespace MySecondHand.Spider.Model
         public string ItemHtml { get; set; }
         public string ItemZone { get; set; }
         public SpiderType ItemSource { get; set; }
-
     }
 }

@@ -71,7 +71,14 @@ namespace MySecondHand.Spider
 
         public string ComposeSearchUrl(SearchParameter parameter)
         {
-            string searchParams = string.Empty;
+            string searchParams = "/anuncios-toda-espana/";
+            if (parameter != null)
+            {
+                if (!string.IsNullOrEmpty(parameter.SearchKey))
+                {
+                    searchParams = $"/{parameter.SearchKey.Trim().Replace(' ', '-')}.htm";
+                }
+            }
 
             return string.Concat(BASE_URL, searchParams);
         }
