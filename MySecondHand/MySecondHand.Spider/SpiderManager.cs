@@ -19,11 +19,11 @@ namespace MySecondHand.Spider
         public SpiderManager(IWpSpider wpSpider, IVbbSpider vbbSpider, IMaSpider maSpider)
         {
             _wpSpider = wpSpider;
-            _wpSpider.Enabled = false;
+            _wpSpider.Enabled = true;
             _vbbSpider = vbbSpider;
             _vbbSpider.Enabled = true;
             _maSpider = maSpider;
-            _maSpider.Enabled = false;
+            _maSpider.Enabled = true;
             Spiders = new List<ISpider>()
             {
                 _wpSpider,

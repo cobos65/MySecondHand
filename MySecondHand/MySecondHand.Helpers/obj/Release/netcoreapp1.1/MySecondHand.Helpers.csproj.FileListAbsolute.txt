@@ -1,0 +1,7 @@
+H:\Projects\Git\MySecondHand\MySecondHand.Helpers\bin\Release\netcoreapp1.1\MySecondHand.Helpers.deps.json
+H:\Projects\Git\MySecondHand\MySecondHand.Helpers\bin\Release\netcoreapp1.1\MySecondHand.Helpers.dll
+H:\Projects\Git\MySecondHand\MySecondHand.Helpers\bin\Release\netcoreapp1.1\MySecondHand.Helpers.pdb
+H:\Projects\Git\MySecondHand\MySecondHand.Helpers\obj\Release\netcoreapp1.1\MySecondHand.Helpers.csprojResolveAssemblyReference.cache
+H:\Projects\Git\MySecondHand\MySecondHand.Helpers\obj\Release\netcoreapp1.1\MySecondHand.Helpers.AssemblyInfo.cs
+H:\Projects\Git\MySecondHand\MySecondHand.Helpers\obj\Release\netcoreapp1.1\MySecondHand.Helpers.dll
+H:\Projects\Git\MySecondHand\MySecondHand.Helpers\obj\Release\netcoreapp1.1\MySecondHand.Helpers.pdb

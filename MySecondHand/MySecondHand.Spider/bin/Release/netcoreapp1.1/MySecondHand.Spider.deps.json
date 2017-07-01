@@ -1,0 +1,173 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v1.1",
+    "signature": "b9cb1a37283f696b6cd588988e685c55c9f5cc23"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v1.1": {
+      "mysecondhand.spider/1.0.0": {
+        "dependencies": {
+          "HtmlAgilityPack.NetCore": "1.5.0.1",
+          "MySecondHand.Helpers": "1.0.0",
+          "NSubstitute": "2.0.2"
+        },
+        "runtime": {
+          "MySecondHand.Spider.dll": {}
+        }
+      },
+      "castle.core/4.0.0": {
+        "dependencies": {
+          "System.Collections.Specialized": "4.0.1",
+          "System.ComponentModel.TypeConverter": "4.1.0",
+          "System.Diagnostics.TraceSource": "4.0.0",
+          "System.Xml.XmlSerializer": "4.0.11"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Castle.Core.dll": {}
+        }
+      },
+      "htmlagilitypack.netcore/1.5.0.1": {
+        "runtime": {
+          "lib/netstandard1.3/HtmlAgilityPack.NetCore.dll": {}
+        }
+      },
+      "nsubstitute/2.0.2": {
+        "dependencies": {
+          "Castle.Core": "4.0.0"
+        },
+        "runtime": {
+          "lib/netstandard1.5/NSubstitute.dll": {}
+        }
+      },
+      "system.collections.nongeneric/4.0.1": {
+        "runtime": {
+          "lib/netstandard1.3/System.Collections.NonGeneric.dll": {}
+        }
+      },
+      "system.collections.specialized/4.0.1": {
+        "dependencies": {
+          "System.Collections.NonGeneric": "4.0.1"
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Collections.Specialized.dll": {}
+        }
+      },
+      "system.componentmodel.primitives/4.1.0": {
+        "runtime": {
+          "lib/netstandard1.0/System.ComponentModel.Primitives.dll": {}
+        }
+      },
+      "system.componentmodel.typeconverter/4.1.0": {
+        "dependencies": {
+          "System.Collections.NonGeneric": "4.0.1",
+          "System.Collections.Specialized": "4.0.1",
+          "System.ComponentModel.Primitives": "4.1.0"
+        },
+        "runtime": {
+          "lib/netstandard1.5/System.ComponentModel.TypeConverter.dll": {}
+        }
+      },
+      "system.diagnostics.tracesource/4.0.0": {
+        "runtimeTargets": {
+          "runtimes/unix/lib/netstandard1.3/System.Diagnostics.TraceSource.dll": {
+            "rid": "unix",
+            "assetType": "runtime"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Diagnostics.TraceSource.dll": {
+            "rid": "win",
+            "assetType": "runtime"
+          }
+        }
+      },
+      "system.xml.xmlserializer/4.0.11": {
+        "runtime": {
+          "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
+        }
+      },
+      "mysecondhand.helpers/1.0.0": {
+        "dependencies": {
+          "HtmlAgilityPack.NetCore": "1.5.0.1"
+        },
+        "runtime": {
+          "MySecondHand.Helpers.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "mysecondhand.spider/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "castle.core/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iLINpMFc07bcb0d075AB0mcXV/MT8J8oyBarDSeyrLM03UoCVOuvYu87LI4511XHfy7XEhHtMDum5gt2s56xDg==",
+      "path": "castle.core/4.0.0",
+      "hashPath": "castle.core.4.0.0.nupkg.sha512"
+    },
+    "htmlagilitypack.netcore/1.5.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-N6FUlFbidfiWu1TcrNDQufaU5TbZ2RRn+kYHjwsLxcklQU8Cnmul+pTn2clKausZRHeFVxGp2ZECIWuDvot8Hg==",
+      "path": "htmlagilitypack.netcore/1.5.0.1",
+      "hashPath": "htmlagilitypack.netcore.1.5.0.1.nupkg.sha512"
+    },
+    "nsubstitute/2.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VBxhx4L2FBHpDOlQgMhpRxmzg7bJYiGDutqh+mxtLtZityvoBOzNP8jwEFKz0WjhKLdc9onXTyXwuPf3MnUzFA==",
+      "path": "nsubstitute/2.0.2",
+      "hashPath": "nsubstitute.2.0.2.nupkg.sha512"
+    },
+    "system.collections.nongeneric/4.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hMxFT2RhhlffyCdKLDXjx8WEC5JfCvNozAZxCablAuFRH74SCV4AgzE8yJCh/73bFnEoZgJ9MJmkjQ0dJmnKqA==",
+      "path": "system.collections.nongeneric/4.0.1",
+      "hashPath": "system.collections.nongeneric.4.0.1.nupkg.sha512"
+    },
+    "system.collections.specialized/4.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/HKQyVP0yH1I0YtK7KJL/28snxHNH/bi+0lgk/+MbURF6ULhAE31MDI+NZDerNWu264YbxklXCCygISgm+HMug==",
+      "path": "system.collections.specialized/4.0.1",
+      "hashPath": "system.collections.specialized.4.0.1.nupkg.sha512"
+    },
+    "system.componentmodel.primitives/4.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sc/7eVCdxPrp3ljpgTKVaQGUXiW05phNWvtv/m2kocXqrUQvTVWKou1Edas2aDjTThLPZOxPYIGNb/HN0QjURg==",
+      "path": "system.componentmodel.primitives/4.1.0",
+      "hashPath": "system.componentmodel.primitives.4.1.0.nupkg.sha512"
+    },
+    "system.componentmodel.typeconverter/4.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MnDAlaeJZy9pdB5ZdOlwdxfpI+LJQ6e0hmH7d2+y2LkiD8DRJynyDYl4Xxf3fWFm7SbEwBZh4elcfzONQLOoQw==",
+      "path": "system.componentmodel.typeconverter/4.1.0",
+      "hashPath": "system.componentmodel.typeconverter.4.1.0.nupkg.sha512"
+    },
+    "system.diagnostics.tracesource/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6WVCczFZKXwpWpzd/iJkYnsmWTSFFiU24Xx/YdHXBcu+nFI/ehTgeqdJQFbtRPzbrO3KtRNjvkhtj4t5/WwWsA==",
+      "path": "system.diagnostics.tracesource/4.0.0",
+      "hashPath": "system.diagnostics.tracesource.4.0.0.nupkg.sha512"
+    },
+    "system.xml.xmlserializer/4.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FrazwwqfIXTfq23mfv4zH+BjqkSFNaNFBtjzu3I9NRmG8EELYyrv/fJnttCIwRMFRR/YKXF1hmsMmMEnl55HGw==",
+      "path": "system.xml.xmlserializer/4.0.11",
+      "hashPath": "system.xml.xmlserializer.4.0.11.nupkg.sha512"
+    },
+    "mysecondhand.helpers/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
