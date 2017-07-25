@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Globalization;
 using System.Text.RegularExpressions;
 
 namespace MySecondHand.Spider.Model
@@ -19,10 +17,10 @@ namespace MySecondHand.Spider.Model
             Currency resultCurrency = null;
 
             try
-            {
+            {                
                 resultCurrency = new Currency();
                 Match match = Regex.Match(currencyToParse, VALUE_REGEX);
-                resultCurrency.Value = decimal.Parse(match.Value.Replace(".",","));
+                resultCurrency.Value = decimal.Parse(match.Value.Replace(".",","),NumberStyles.Currency);                
 
                 match = Regex.Match(currencyToParse, SYMBOL_REGEX);
                 resultCurrency.Symbol = match.Value;
@@ -35,6 +33,11 @@ namespace MySecondHand.Spider.Model
             currency = resultCurrency;
 
             return result;
+        }
+
+        public override string ToString()
+        {
+            return $"{Value} {Symbol}";
         }
     }
 

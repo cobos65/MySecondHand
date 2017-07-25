@@ -42,7 +42,6 @@ namespace MySecondHand.Spider
                 if (htmlDocument != null)
                 {
                     var spiderProducts = spider.GetSearchedItems(htmlDocument);
-                    spiderProducts = spiderProducts.Select(product => { product.ItemSource = spider.Type; return product; }).ToList();
                     searchedProducts.AddRange(spiderProducts);
                 }
             }

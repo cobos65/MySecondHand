@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MySecondHand.Spider.Model
+﻿namespace MySecondHand.Spider.Model
 {
     public class ProductItem
     {
@@ -15,5 +11,13 @@ namespace MySecondHand.Spider.Model
         public string ItemHtml { get; set; }
         public string ItemZone { get; set; }
         public SpiderType ItemSource { get; set; }
+        public Currency ItemValue
+        {
+            get
+            {
+                Currency.TryParse(ItemPrice, out Currency currency);
+                return currency;
+            }
+        }
     }
 }

@@ -60,12 +60,15 @@ namespace MySecondHand.Web2.Controllers
                     ItemName= productItem.ItemName,
                     ItemPrice = productItem.ItemPrice,
                     ItemSource= productItem.ItemSource,
-                    ItemImage = productItem.ItemImage
+                    ItemImage = productItem.ItemImage,
+                    ItemValue = productItem.ItemValue
                 };
                 productItemViewModels.Add(productItemViewModel);
             }
+            //TODO: review order
+            var productList = productItemViewModels.OrderBy(product => product.ItemValue.Value).ToList();
 
-            return View("Index", productItemViewModels);
+            return View("Index", productList);
         }
     }
 }
