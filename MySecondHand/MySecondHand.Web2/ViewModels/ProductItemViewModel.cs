@@ -12,6 +12,7 @@ namespace MySecondHand.Web2.ViewModels
         public SpiderType ItemSource { get; set; }
         public string ItemPrice { get; set; }
         public string ItemImage { get; set; }
+        public string ItemLink { get; set; }
         public Currency ItemValue { get; set; }
     }
 }

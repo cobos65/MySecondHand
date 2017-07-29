@@ -70,9 +70,9 @@ namespace MySecondHand.Spider
                 {
                     var productItem = new ProductItem();
                     productItem.ItemName = documentNode.SelectNodes(TITTLE_XPATH).First().InnerHtml.Trim();
-                    productItem.ItemLink = documentNode.SelectNodes(TITTLE_XPATH).First().GetAttributeValue("href", "");
+                    productItem.ItemLink = $"https://{BASE_URL}/{documentNode.SelectNodes(TITTLE_XPATH).First().GetAttributeValue("href", "")}";
                     productItem.ItemCategory = string.IsNullOrEmpty(CATEGORY_XPATH) ? null : documentNode.SelectNodes(CATEGORY_XPATH).First().InnerHtml.Trim();
-                    productItem.ItemCategoryLink = string.IsNullOrEmpty(CATEGORY_XPATH) ? null : documentNode.SelectNodes(CATEGORY_XPATH).First().GetAttributeValue("href", "");
+                    productItem.ItemCategoryLink = string.IsNullOrEmpty(CATEGORY_XPATH) ? null : $"https://{BASE_URL}/{documentNode.SelectNodes(CATEGORY_XPATH).First().GetAttributeValue("href", "")}";
                     productItem.ItemPrice = documentNode.SelectNodes(PRICE_XPATH).First().InnerText.Trim().Replace(";", "").Replace("&euro", "€");
                     productItem.ItemZone = documentNode.SelectNodes(ZONE_XPATH).First().InnerText.Split('(', ')')[1];
                     productItem.ItemImage = documentNode.SelectNodes(IMAGE_XPATH) == null ? null : documentNode.SelectNodes(IMAGE_XPATH)

@@ -61,7 +61,8 @@ namespace MySecondHand.Web2.Controllers
                     ItemPrice = productItem.ItemPrice,
                     ItemSource= productItem.ItemSource,
                     ItemImage = productItem.ItemImage,
-                    ItemValue = productItem.ItemValue
+                    ItemValue = productItem.ItemValue,
+                    ItemLink = productItem.ItemLink                    
                 };
                 productItemViewModels.Add(productItemViewModel);
             }

@@ -5,16 +5,19 @@
 
 @using (Html.BeginForm("SearchProducts", "Home"))
 {
+    <br />
     @Html.TextBox("searchKey");
     <input type="submit" name="submit" value="Search" />
 }
-
+<br />
 @foreach (var item in Model)
 {
-    <tr>
+    <div style="border:1px solid;">
         <div>@item.ItemSource.ToString()</div>
-        <div>@item.ItemName</div>
+        <div>            
+            <a href=@item.ItemLink target="_blank">@item.ItemName</a>
+        </div>
         <div>@item.ItemValue.ToString()</div>
-        <img src="@item.ItemImage" width="200" height="120"/>
-    </tr>
+        <img src="@item.ItemImage" width="200" height="120" />
+    </div>
 }
