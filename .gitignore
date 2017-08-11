@@ -21,3 +21,6 @@
 /MySecondHand/WebApplication1/obj
 /MySecondHand/MySecondHand.Helpers/obj
 /MySecondHand/MySecondHand.Helpers/obj
+/MySecondHand/MySecondHand.Web2/bin/Release/netcoreapp1.1
+/MySecondHand/MySecondHand.Spider/bin/Release/netcoreapp1.1
+/MySecondHand/MySecondHand.Helpers/bin/Release/netcoreapp1.1
