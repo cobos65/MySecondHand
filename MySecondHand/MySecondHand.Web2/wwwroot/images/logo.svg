@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5250"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="logo.svg">
+  <defs
+     id="defs5244" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="300"
+     inkscape:cy="1048.5714"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="797"
+     inkscape:window-height="419"
+     inkscape:window-x="26"
+     inkscape:window-y="26"
+     inkscape:window-maximized="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid5822" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5247">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g4527"
+       transform="translate(-11.298106,-3.5806443)">
+      <g
+         transform="translate(-13.607143,-36.814888)"
+         id="g5820">
+        <g
+           transform="translate(0.63194369,-12.504105)"
+           id="g976">
+          <path
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.285;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             d="m 54.964971,53.566304 h 2.61027 L 28.354603,78.608572 h -2.61027 z"
+             id="rect5528"
+             inkscape:connector-curvature="0" />
+          <path
+             inkscape:transform-center-y="38.900842"
+             inkscape:transform-center-x="23.571755"
+             inkscape:connector-curvature="0"
+             id="path3680-2-1"
+             d="M 41.72261,53.893765 A 16.211786,12.370647 0 0 0 25.511197,66.264067 16.211786,12.370647 0 0 0 41.72261,78.634889 16.211786,12.370647 0 0 0 57.934541,66.264067 16.211786,12.370647 0 0 0 41.72261,53.893765 Z m 0.105933,3.164665 A 10.775422,9.3101545 0 0 1 52.604115,66.368456 10.775422,9.3101545 0 0 1 41.828543,75.678482 10.775422,9.3101545 0 0 1 31.052974,66.368456 10.775422,9.3101545 0 0 1 41.828543,57.05843 Z"
+             style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.21833219;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.98591548" />
+        </g>
+        <flowRoot
+           xml:space="preserve"
+           id="flowRoot2630-8"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:all-small-caps;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:0.99295774"
+           transform="matrix(0.26458333,0,0,0.26458333,6.4951517,-85.209971)"><flowRegion
+             id="flowRegion2632-0"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:all-small-caps;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:0.99295774"><rect
+               id="rect2634-3"
+               width="355"
+               height="120"
+               x="81.25"
+               y="501.26968"
+               style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:all-small-caps;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:0.99295774" /></flowRegion><flowPara
+             id="flowPara2648-0"
+             style="fill:#ffffff;fill-opacity:1">zeRo</flowPara></flowRoot>      </g>
+    </g>
+  </g>
+</svg>
