@@ -8,9 +8,9 @@ namespace MySecondHand.Helpers.WebHelper.IntegrationTests
     public class HtmlClientHelperTest
     {
         [Fact]
-        public void GetInnerHtmlShouldReturn()
+        public void GetInnerHtmlVibboShouldReturn()
         {
-            var url = "http://www.google.es";
+            var url = "www.vibbo.com/";
             var htmlClientHelper = new HtmlClientHelper();
 
             var result = htmlClientHelper.GetInnerHtml(url);
@@ -18,20 +18,23 @@ namespace MySecondHand.Helpers.WebHelper.IntegrationTests
         }
 
         [Fact]
-        public void GetInnerHtmlShouldReturn2()
+        public void GetInnerHtmlWallapopShouldReturn()
         {
-            var url = "https://www.vibbo.com/";
-            using (var client = new HttpClient())
-            {
-                //client.BaseAddress = new Uri($"https://{url}");
-                client.DefaultRequestHeaders.Accept.Clear();
-                client.CancelPendingRequests();
-                var response = Task.Run(() => client.GetAsync(url)).Result;
-                if (response.IsSuccessStatusCode)
-                {
-                    var responseJson = response.Content.ReadAsStringAsync();
-                }
-            }
+            var url = "www.wallapop.com";
+            var htmlClientHelper = new HtmlClientHelper();
+
+            var result = htmlClientHelper.GetInnerHtml(url);
+            Assert.NotNull(result);
+        }
+
+        [Fact]
+        public void GetInnerHtmlSegundamanoShouldReturn()
+        {
+            var url = "www.milanuncios.com";
+            var htmlClientHelper = new HtmlClientHelper();
+
+            var result = htmlClientHelper.GetInnerHtml(url);
+            Assert.NotNull(result);
         }
     }
 }

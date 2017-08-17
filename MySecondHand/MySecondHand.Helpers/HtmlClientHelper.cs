@@ -2,6 +2,8 @@
 using MySecondHand.Helpers.Interfaces;
 using System;
 using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace SecondHand.Helpers
@@ -17,15 +19,17 @@ namespace SecondHand.Helpers
         {
             HtmlDocument htmlDocument = null;
             using (var client = new HttpClient())
-            {
-                //client.BaseAddress = new Uri($"https://{url}");
-                client.DefaultRequestHeaders.Accept.Clear();
+            {                                
+                client.DefaultRequestHeaders.Add("User-Agent","test");
+                client.DefaultRequestHeaders.AcceptCharset.Add(new StringWithQualityHeaderValue("ISO-8859-15"));
                 var response = Task.Run(() => client.GetAsync($"https://{url}")).Result;
                 if (response.IsSuccessStatusCode)
                 {
-                    var responseJson = response.Content.ReadAsStringAsync();
+
+                    var responseByteArray =  response.Content.ReadAsByteArrayAsync().Result;
                     htmlDocument = new HtmlDocument();
-                    htmlDocument.LoadHtml(responseJson.Result);
+                    var responseString = Encoding.UTF8.GetString(responseByteArray, 0, responseByteArray.Length - 1);
+                    htmlDocument.LoadHtml(responseString);
                 }
             }
 

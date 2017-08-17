@@ -61,7 +61,7 @@ namespace MySecondHand.Spider
                     productItem.ItemZone = documentNode.SelectNodes(ZONE_XPATH).First().InnerText.Trim();
                     productItem.ItemImage = documentNode.SelectNodes(IMAGE_XPATH)
                         .First()
-                        .GetAttributeValue("src", "");
+                        .GetAttributeValue("title", "");
                     productItem.ItemHtml = documentNode.InnerHtml;
                     productItem.ItemSource = Type;
 

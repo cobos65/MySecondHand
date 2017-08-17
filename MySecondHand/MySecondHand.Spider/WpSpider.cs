@@ -18,6 +18,8 @@ namespace MySecondHand.Spider
         private const string CATEGORY_XPATH = "";
         private const string PRICE_XPATH = ".//*[contains(@class, 'product-info-price')]";
         private const string IMAGE_XPATH = ".//img[contains(@class, 'card-product-image')]";
+        private const string ITEM_LINK_XPATH = "a[1]";
+
         private bool _enabled = true;
 
         public const string BASE_URL = "es.wallapop.com";
@@ -64,7 +66,7 @@ namespace MySecondHand.Spider
                 {
                     var productItem = new ProductItem();
                     productItem.ItemName = documentNode.SelectNodes(TITTLE_XPATH).First().InnerHtml.Trim();
-                    productItem.ItemLink = $"https://{BASE_URL}/{documentNode.SelectSingleNode("a[1]").GetAttributeValue("href", "")}";
+                    productItem.ItemLink = $"https://{BASE_URL}/{documentNode.SelectSingleNode(ITEM_LINK_XPATH).GetAttributeValue("href", "")}";
                     productItem.ItemCategory = string.IsNullOrEmpty(CATEGORY_XPATH) ? null : documentNode.SelectNodes(CATEGORY_XPATH).First().InnerHtml.Trim();
                     productItem.ItemCategoryLink = string.IsNullOrEmpty(CATEGORY_XPATH) ? null : $"https://{BASE_URL}/{documentNode.SelectNodes(CATEGORY_XPATH).First().GetAttributeValue("href", "")}";
                     productItem.ItemPrice = documentNode.SelectNodes(PRICE_XPATH).First().InnerHtml.Trim();
