@@ -8,6 +8,25 @@
     <br />
     @Html.TextBox("searchKey");
     <input type="submit" name="submit" value="Search" />
+
+    <div class="checkbox">
+        <label><input type="checkbox" checked="checked" value="0" disabled>Wallapop</label>
+    </div>
+    <div class="checkbox">
+        <label><input type="checkbox" checked="checked" value="1" disabled>Mil Anuncios</label>
+    </div>
+    <div class="checkbox">
+        <label><input type="checkbox" checked="checked" value="2" disabled>Vibbo</label>
+    </div>
+    <div class="form-group">
+        <label for="sel1">Provincias:</label>
+        <select class="form-control" id="provincias" disabled>
+            <option selected="selected">Todas</option>
+            <option>BURGOS</option>
+            <option>SORIA</option>
+            <option>SEGOVIA</option>
+        </select>
+    </div>
 }
 <br />
 <div class="row">
