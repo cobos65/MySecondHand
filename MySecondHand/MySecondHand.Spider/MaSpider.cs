@@ -12,6 +12,8 @@ namespace MySecondHand.Spider
     {
         public const string BASE_URL = "www.milanuncios.com";
         private IHtmlClientHelper _htmlClientHelper;
+        private const string THOUSANDS_SEPARATOR = ".";
+        private const string DECIMAL_SEPARATOR = "";
 
         private const string TITTLE_XPATH = ".//*[contains(@class, 'aditem-detail-title')]";
         private const string CATEGORY_XPATH = "";
@@ -81,6 +83,9 @@ namespace MySecondHand.Spider
                     productItem.ItemHtml = documentNode.InnerHtml;
 
                     productItem.ItemSource = Type;
+
+                    productItem.ItemPrice = productItem.ItemPrice.Replace(THOUSANDS_SEPARATOR, string.Empty);
+
                     items.Add(productItem);
                 }
             }

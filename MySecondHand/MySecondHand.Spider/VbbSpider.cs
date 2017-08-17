@@ -11,6 +11,9 @@ namespace MySecondHand.Spider
     {
         public const string BASE_URL = "www.vibbo.com";
         private IHtmlClientHelper _htmlClientHelper;
+        private const string THOUSANDS_SEPARATOR = ".";
+        private const string DECIMAL_SEPARATOR = "";
+
 
         //TODO
         private const string TITTLE_XPATH = ".//*[contains(@class, 'subjectTitle')]";
@@ -61,6 +64,8 @@ namespace MySecondHand.Spider
                         .GetAttributeValue("src", "");
                     productItem.ItemHtml = documentNode.InnerHtml;
                     productItem.ItemSource = Type;
+
+                    productItem.ItemPrice = productItem.ItemPrice.Replace(THOUSANDS_SEPARATOR, string.Empty);
 
                     items.Add(productItem);
                 }

@@ -10,14 +10,16 @@
     <input type="submit" name="submit" value="Search" />
 }
 <br />
-@foreach (var item in Model)
-{
-    <div style="border:1px solid;">
-        <div>@item.ItemSource.ToString()</div>
-        <div>            
-            <a href=@item.ItemLink target="_blank">@item.ItemName</a>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div style="border:1px solid;" class="col-sm-4">
+            <div>@item.ItemSource.ToString()</div>
+            <div>
+                <a href=@item.ItemLink target="_blank">@item.ItemName</a>
+            </div>
+            <div>@item.ItemValue.ToString()</div>
+            <img src="@item.ItemImage" width="200" height="120" />
         </div>
-        <div>@item.ItemValue.ToString()</div>
-        <img src="@item.ItemImage" width="200" height="120" />
-    </div>
-}
+    }
+</div>

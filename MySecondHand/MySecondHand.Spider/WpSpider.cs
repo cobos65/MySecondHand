@@ -15,7 +15,7 @@ namespace MySecondHand.Spider
         private IHtmlClientHelper _htmlClientHelper;
 
         private const string TITTLE_XPATH = ".//*[contains(@class, 'product-info-title')]";
-        private const string CATEGORY_XPATH = ".//*[contains(@class, 'product-info-category')]";
+        private const string CATEGORY_XPATH = "";
         private const string PRICE_XPATH = ".//*[contains(@class, 'product-info-price')]";
         private const string IMAGE_XPATH = ".//img[contains(@class, 'card-product-image')]";
         private bool _enabled = true;
@@ -55,7 +55,7 @@ namespace MySecondHand.Spider
 
             var findItems = searchResult.DocumentNode
                 .Descendants("div")
-                .Where(d => d.Attributes["class"] != null && d.Attributes["class"].Value.Contains("card ") && d.Attributes["class"].Value.Contains("card-product ")
+                .Where(d => d.Attributes["class"] != null && d.Attributes["class"].Value.Contains("card ") && d.Attributes["class"].Value.Contains("card-product")
                 );
 
             foreach (var documentNode in findItems)
@@ -64,9 +64,9 @@ namespace MySecondHand.Spider
                 {
                     var productItem = new ProductItem();
                     productItem.ItemName = documentNode.SelectNodes(TITTLE_XPATH).First().InnerHtml.Trim();
-                    productItem.ItemLink = $"https://{BASE_URL}/{documentNode.SelectNodes(TITTLE_XPATH).First().GetAttributeValue("href", "")}";
-                    productItem.ItemCategory = documentNode.SelectNodes(CATEGORY_XPATH).First().InnerHtml.Trim();
-                    productItem.ItemCategoryLink = $"https://{BASE_URL}/{documentNode.SelectNodes(CATEGORY_XPATH).First().GetAttributeValue("href", "")}";
+                    productItem.ItemLink = $"https://{BASE_URL}/{documentNode.SelectSingleNode("a[1]").GetAttributeValue("href", "")}";
+                    productItem.ItemCategory = string.IsNullOrEmpty(CATEGORY_XPATH) ? null : documentNode.SelectNodes(CATEGORY_XPATH).First().InnerHtml.Trim();
+                    productItem.ItemCategoryLink = string.IsNullOrEmpty(CATEGORY_XPATH) ? null : $"https://{BASE_URL}/{documentNode.SelectNodes(CATEGORY_XPATH).First().GetAttributeValue("href", "")}";
                     productItem.ItemPrice = documentNode.SelectNodes(PRICE_XPATH).First().InnerHtml.Trim();
                     productItem.ItemImage = documentNode.SelectNodes(IMAGE_XPATH)
                         .First()
@@ -103,7 +103,6 @@ namespace MySecondHand.Spider
             else
             {
                 valid = node.SelectNodes(TITTLE_XPATH) != null
-                    && node.SelectNodes(CATEGORY_XPATH) != null
                     && node.SelectNodes(PRICE_XPATH) != null
                     && node.SelectNodes(IMAGE_XPATH) != null;
 
